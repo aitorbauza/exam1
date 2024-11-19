@@ -1,0 +1,60 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <!-- Botón Luna (a la derecha del Toolbar) -->
+
+    <!-- Botón Cara Sonriente (a la derecha del botón luna) -->
+    <TextView
+        android:id="@+id/article_heading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#101DCE"
+        android:padding="20dp"
+        android:text="Posta de Sol"
+        android:textColor="@android:color/white"
+        android:textStyle="bold" />
+
+    <!-- Vista del cielo -->
+
+    <ImageButton
+        android:id="@+id/button1"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="53dp"
+        android:src="@drawable/luna" />
+
+    <FrameLayout
+        android:id="@+id/sky"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/article_heading"
+        android:background="#107EC3">
+
+        <!-- Vista del sol -->
+        <ImageView
+            android:id="@+id/sun"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="100dp"
+            android:background="@drawable/sun"
+            android:translationY="0dp" />
+
+        <!-- Vista del mar -->
+        <View
+            android:id="@+id/sea"
+            android:layout_width="match_parent"
+            android:layout_height="280dp"
+            android:layout_gravity="bottom"
+            android:background="#03253A" />
+    </FrameLayout>
+</RelativeLayout>
